@@ -1,10 +1,9 @@
-import { type Product } from "@/db/schema"
 import { type FileWithPath } from "react-dropzone"
 import { type z } from "zod"
 
 import { type userPrivateMetadataSchema } from "@/lib/validations/auth"
-import type { cartItemSchema, checkoutItemSchema, faqItemSchema } from "@/lib/validations/cart"
-import { type Icons } from "@/components/UI/icons"
+import type { cartItemSchema, checkoutItemSchema, } from "@/lib/validations/cart"
+import { type Icons } from "@/components/icons"
 
 export interface NavItem {
   title: string
@@ -68,24 +67,6 @@ export interface DataTableFilterableColumn<TData>
 export type CartItem = z.infer<typeof cartItemSchema>
 
 export type CheckoutItem = z.infer<typeof checkoutItemSchema>
-
-export type FaqItem = z.infer<typeof faqItemSchema>
-
-export interface CartLineItem
-  extends Pick<
-    Product,
-    | "id"
-    | "name"
-    | "images"
-    // | "category"
-    | "subcategory"
-    | "price"
-    | "inventory"
-    | "storeid"
-  > {
-  quantity?: number
-  storeName: string | null
-}
 
 export interface SubscriptionPlan {
   id: "basic" | "standard" | "pro"
