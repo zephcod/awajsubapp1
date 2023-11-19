@@ -8,9 +8,8 @@ import type { z } from "zod"
 
 import appwriteAuthService from "@/db/appwrite_auth"
 import useAuth from "@/hooks/use_auth"
-import { catchClerkError } from "@/app/utils/utils"
 import { loginSchema } from "@/lib/validations/auth"
-import { Button } from "@/components/UI/button"
+import { Button } from "@/components/ui/button"
 import {
   Form,
   FormControl,
@@ -18,9 +17,9 @@ import {
   FormItem,
   FormLabel,
   FormMessage,
-} from "@/components/UI/form"
-import { Input } from "@/components/UI/input"
-import { Icons } from "@/components/UI/icons"
+} from "@/components/ui/form"
+import { Input } from "@/components/ui/input"
+import { Icons } from "@/components/icons"
 import { PasswordInput } from "@/components/password_input"
 import { toast } from "sonner"
 

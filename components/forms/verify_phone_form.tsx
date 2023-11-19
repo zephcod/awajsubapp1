@@ -7,9 +7,9 @@ import { useForm } from "react-hook-form"
 import { toast } from "sonner"
 import type { z } from "zod"
 
-import { absoluteUrl, catchClerkError } from "@/app/utils/utils"
+import { absoluteUrl } from "@/lib/utils"
 import { verfifyEmailSchema } from "@/lib/validations/auth"
-import { Button } from "@/components/UI/button"
+import { Button } from "@/components/ui/button"
 import {
   Form,
   FormControl,
@@ -17,9 +17,9 @@ import {
   FormItem,
   FormLabel,
   FormMessage,
-} from "@/components/UI/form"
-import { Input } from "@/components/UI/input"
-import { Icons } from "@/components/UI/icons"
+} from "@/components/ui/form"
+import { Input } from "@/components/ui/input"
+import { Icons } from "@/components/icons"
 import appwriteAuthService from "@/db/appwrite_auth"
 
 type Inputs = z.infer<typeof verfifyEmailSchema>
